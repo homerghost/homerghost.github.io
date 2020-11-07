@@ -1,5 +1,5 @@
 ///
-/// Altitude by Pixelarity
+/// Threshold by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
@@ -7,51 +7,51 @@
 /* Wrapper */
 
 	.wrapper {
-		width: 100%;
+		@include padding(6rem, 0);
+		position: relative;
+		z-index: _misc(z-index-base);
 
-		> .inner {
-			width: 80em;
-			max-width: 100%;
-			margin-left: auto;
-			margin-right: auto;
+		.inner {
+			position: relative;
+			z-index: _misc(z-index-base) + 2;
+		}
 
-			> .main {
-				@include padding(6em, 6em);
-				background-color: _palette(bg);
+		&.style1 {
+			background: _palette(bg-dark);
+			position: relative;
 
-				&.accent1 {
-					@include color(accent1);
+			&.top {
+				&:before {
+					background: _palette(bg);
+					content: '';
+					height: 19.5rem;
+					left: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+					z-index: _misc(z-index-base) + 1;
 				}
+			}
 
-				&.accent2 {
-					@include color(accent2);
-				}
-
-				&.accent3 {
-					@include color(accent3);
-				}
-
-				&.accent4 {
-					@include color(accent4);
-				}
-
-				@include breakpoint('<=xlarge') {
-					@include padding(5em, 5em);
-				}
-
-				@include breakpoint('<=small') {
-					@include padding(3em, 2em);
-				}
-
-				@include breakpoint('<=xsmall') {
-					@include padding(3em, 1.5em);
+			&.bottom {
+				&:before {
+					background: _palette(bg);
+					bottom: 0;
+					content: '';
+					height: 15rem;
+					left: 0;
+					position: absolute;
+					width: 100%;
+					z-index: _misc(z-index-base) + 1;
 				}
 			}
 		}
 
-		@include breakpoint('<=xlarge') {
-			> .inner {
-				width: 72em;
-			}
+		@include breakpoint('<=large') {
+			@include padding(3rem, 0);
+		}
+
+		@include breakpoint('<=small') {
+			@include padding(2rem, 0);
 		}
 	}

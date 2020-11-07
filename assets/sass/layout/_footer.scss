@@ -1,150 +1,133 @@
 ///
-/// Altitude by Pixelarity
+/// Threshold by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
-
 /* Footer */
 
 	#footer {
-		@include color-typography(accent1);
-		margin-top: 4em;
-		background-color: transparent;
-		text-align: center;
+		text-align:center;
 
-		a {
-			border-bottom-color: transparent;
-			color: _palette(accent1, fg);
+		.contact-form {
+			margin-bottom: _size(element-margin) * 3;
 
-			&:hover {
-				border-bottom-color: inherit;
+			ul {
+				margin-bottom: 0;
 			}
 		}
 
-		> :last-child {
-			margin-bottom: 0;
-		}
+		.contact-info {
+			@include vendor('display','flex');
+			@include vendor('flex-wrap','wrap');
+			@include vendor('align-items','center');
+			@include vendor('justify-content','space-between');
+			margin: 0 auto _size(element-margin) * 2 auto;
+			padding-left: 2rem;
+			width: 40rem;
 
-		.links {
-			@include vendor('display', 'flex');
-			@include vendor('flex-direction', 'row');
-			@include vendor('flex-wrap', 'wrap');
-			margin: 0 0 4em 0;
+			.item {
+				@include vendor('display','flex');
+				@include vendor('align-items','center');
+				height: 2.75rem;
+				margin-bottom: _size(element-margin);
+				text-align: left;
+				width: 18rem;
 
-			> div {
-				@include padding(2em, 0);
-				@include vendor('flex-grow', '0');
-				@include vendor('flex-shrink', '0');
-				border-left: solid 1px _palette(accent1, border);
-				border-top: solid 1px _palette(accent1, border);
-				width: 25%;
+				p {
+					margin: 0;
+				}
 
-				ul {
-					list-style: none;
-					margin-top: _size(element-margin);
-					padding: 0 2em;
+				a {
+					color: _palette(fg);
+					text-decoration: none;
 
-					li {
-						margin: 0.75em 0;
-						padding-left: 0;
+					&:hover {
+						color: _palette(fg-bold);
 					}
 				}
-
-				&:nth-child(4n - 3) {
-					border-left-width: 0;
-				}
-
-				&:nth-child(-n + 4) {
-					border-top-width: 0;
-				}
 			}
 		}
 
-		.contact-icons {
-			display: inline-block;
+		.inner {
+			max-width: 50rem;
 
-			li {
-				display: inline-block;
-				margin-left: 2em;
+			header {
+				margin: 0 auto;
+				max-width: 75%;
 
-				&:before {
-					color: _palette(accent1, fg-bold);
-					font-size: 0.85em;
+				>:last-child {
+					margin-bottom: 0;
 				}
+			}
 
-				&:first-child {
-					margin-left: 0;
+			.icon {
+				&.alt {
+					margin: 0 _size(element-margin) 0 0;
 				}
 			}
 		}
 
 		.copyright {
-			color: _palette(accent1, fg-light);
+			color: _palette(fg-light);
+			margin: 0 auto _size(element-margin) * 2 auto;
+			max-width: 80rem;
+			text-align: center;
+		}
+
+		@include breakpoint('<=large') {
+			.inner {
+				max-width: calc(100% - 6rem);
+			}
+
+			.copyright {
+				max-width: calc(100% - 6rem);
+			}
+
+			.contact-form {
+				margin-bottom: _size(element-margin) * 2;
+			}
 		}
 
 		@include breakpoint('<=medium') {
-			.links {
-				> div {
-					width: 50%;
+			.inner {
+				max-width: calc(100% - 5rem);
 
-					&:nth-child(4n - 3) {
-						border-left-width: 1px;
-					}
-
-					&:nth-child(-n + 4) {
-						border-top-width: 1px;
-					}
-
-					&:nth-child(2n - 1) {
-						border-left-width: 0;
-					}
-
-					&:nth-child(-n + 2) {
-						border-top-width: 0;
-					}
+				header {
+					max-width: 100%;
 				}
 			}
 
-			.contact-icons {
-				display: block;
-
-				li {
-					display: block;
-					margin: 1em 0 0 0;
-
-					&:first-child {
-						margin-top: 0;
-					}
-				}
+			.copyright {
+				max-width: calc(100% - 5rem);
+				width: 100%;
 			}
 		}
 
-		@include breakpoint('<=xsmall') {
-			padding: 0 1.5em;
+		@include breakpoint('<=small') {
+			.inner {
+				max-width: calc(100% - 4rem);
 
-			.links {
-				margin: 0 0 _size(element-margin) 0;
-
-				> div {
-					border-left: 0;
-					width: 100%;
-
-					&:nth-child(2n - 1) {
-						border-left-width: 1px;
+				.icon {
+					&.alt {
+						margin: 0 (_size(element-margin) * 0.75) 0 0;
 					}
+				}
+			}
 
-					&:nth-child(-n + 2) {
-						border-top-width: 1px;
-					}
+			.copyright {
+				max-width: 100%;
+				margin: 0 auto _size(element-margin) auto;
+				width: 100%;
+			}
 
-					&:first-child {
-						border-top-width: 0;
-						padding-top: 0;
-					}
+			.contact-info {
+				padding-left: 0;
+				width: 100%;
+				margin: 0 auto _size(element-margin) auto;
 
-					&:last-child {
-						padding-bottom: 0;
-					}
+				.item {
+					margin-left: auto;
+					margin-right: auto;
 				}
 			}
 		}

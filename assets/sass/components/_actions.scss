@@ -1,5 +1,5 @@
 ///
-/// Altitude by Pixelarity
+/// Threshold by Pixelarity
 /// pixelarity.com | hello@pixelarity.com
 /// License: pixelarity.com/license
 ///
@@ -40,6 +40,16 @@
 				&:first-child {
 					padding-top: 0;
 				}
+
+				input[type="submit"],
+				input[type="reset"],
+				input[type="button"],
+				button,
+				.button {
+					&.fit {
+						max-width: 24rem;
+					}
+				}
 			}
 		}
 
@@ -58,6 +68,18 @@
 
 			&.stacked {
 				width: 100%;
+			}
+		}
+
+		@include breakpoint('<=large') {
+			&.stacked {
+				li {
+					padding: 1rem 0 0 0;
+
+					&:first-child {
+						padding-top: 0;
+					}
+				}
 			}
 		}
 
@@ -91,7 +113,7 @@
 
 						&.icon {
 							&:before {
-								margin-left: -0.5em;
+								margin-left: -0.5rem;
 							}
 						}
 					}

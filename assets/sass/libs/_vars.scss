@@ -1,83 +1,55 @@
+///
+/// Threshold by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
+///
+
 // Misc.
 	$misc: (
-		z-index-base:				10000
+		z-index-base:		10000
 	);
 
 // Duration.
 	$duration: (
-		menu:						0.5s,
-		transition:					0.2s,
-		slider:						1.5s
+		menu:				0.5s,
+		transition:			0.2s
 	);
 
 // Size.
 	$size: (
-		border-radius:				4px,
-		border-width:				1px,
-		element-height:				2.75em,
-		element-margin:				2em
+		border-radius:		7px,
+		border-width:		3px,
+		element-height:		3rem,
+		element-margin:		2.75rem,
+		container-width:	80rem,
+		header-height:		6rem,
+		menu-width:			20rem
 	);
 
 // Font.
 	$font: (
-		family:						('Raleway', sans-serif),
-		family-fixed:				('Courier New', monospace),
-		weight:						300,
-		weight-bold:				500,
-		weight-extrabold:			600,
-		letter-spacing-heading:		0.1em
+		family:				('Source Sans Pro', Arial, Helvetica, sans-serif),
+		family-fixed:		('Courier New', monospace),
+		weight:				300,
+		weight-bold:		700
 	);
 
 // Palette.
 	$palette: (
-		bg:							#ffffff,
-		fg:							rgba(67,75,86,0.75),
-		fg-bold:					#434b56,
-		fg-light:					rgba(67,75,86,0.5),
-		border:						rgba(67,75,86,0.25),
-		border-bg:					rgba(67,75,86,0.05),
-		border-bg-alt:				rgba(67,75,86,0.1),
+		bg:					#24242a,
+		bg-dark:			#1f1f24,
+		bg-alt:				#2e2e35,
+		fg:					transparentize(#ffffff,0.5),
+		fg-bold:			#ffffff,
+		fg-light:			transparentize(#ffffff,0.5),
+		border:				transparentize(#6e6e7a,0.5),
+		border-bg:			transparent,
 
-		shadow:						rgba(0,0,0,0.1),
-
-		accent1: (
-			bg:						#575b72,
-			fg:						rgba(255,255,255,0.75),
-			fg-bold:				#ffffff,
-			fg-light:				rgba(255,255,255,0.5),
-			border:					rgba(255,255,255,0.25),
-			border-bg:				rgba(255,255,255,0.05),
-			border-bg-alt:			rgba(255,255,255,0.1)
-		),
-
-		accent2: (
-			bg:						#656dba,
-			fg:						rgba(255,255,255,0.75),
-			fg-bold:				#ffffff,
-			fg-light:				rgba(255,255,255,0.5),
-			border:					rgba(255,255,255,0.25),
-			border-bg:				rgba(255,255,255,0.05),
-			border-bg-alt:			rgba(255,255,255,0.1)
-		),
-
-		accent3: (
-			bg:						#7183cd,
-			fg:						rgba(255,255,255,0.75),
-			fg-bold:				#ffffff,
-			fg-light:				rgba(255,255,255,0.5),
-			border:					rgba(255,255,255,0.25),
-			border-bg:				rgba(255,255,255,0.05),
-			border-bg-alt:			rgba(255,255,255,0.1)
-		),
-
-		accent4: (
-			bg:						#eb8585,
-			fg:						rgba(255,255,255,0.75),
-			fg-bold:				#ffffff,
-			fg-light:				rgba(255,255,255,0.5),
-			border:					rgba(255,255,255,0.25),
-			border-bg:				rgba(255,255,255,0.05),
-			border-bg-alt:			rgba(255,255,255,0.1)
-		)
-
+		accent1:			#5EA2C5,
+		accent1-hover:		saturate(lighten(#5EA2C5, 8), 8),
+		accent1-alt:		desaturate(darken(#5EA2C5, 5), 8),
+		accent1-dark:		saturate(darken(#5EA2C5, 18), 3),
+		accent2:			#49A8C4,
+		accent3:			#2e2e35,
+		accent3-alt:		#3e3e47
 	);
