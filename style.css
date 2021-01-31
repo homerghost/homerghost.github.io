@@ -1,0 +1,91 @@
+/* Style Settings */
+@import url('https://fonts.googleapis.com/css?family=Karla:400,600,700&display=swap');
+:root {
+    --bgColor: #fff;
+    --accentColor: #39e09b;
+    --font: 'Karla', sans-serif;
+}
+
+body{
+    background-color: var(--bgColor);
+}
+
+footer{
+				font-size: 0.75rem;
+    line-height: 1.25;
+    text-align: center;
+    color: #bbb;
+    font-family: var(--font);
+    font-weight: 300;
+    padding: 0;
+    margin: 0; 
+}
+
+#userPhoto{
+    width: 96px;
+    height: 96px;
+    display: block;
+    margin: 35px auto 20px;
+    border-radius: 50%;
+}
+
+#links{
+    max-width: 675px;
+    width: auto;
+    display: block;
+    margin: 27px auto;
+}
+.link{
+    display: block;
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+    font-family: var(--font);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 17px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all .25s cubic-bezier(.08,.59,.29,.99);
+    border: solid var(--accentColor) 2px;
+}
+
+.link:hover{
+    background-color: var(--bgColor);
+    color: var(--accentColor);
+}
+
+#userName{
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 0.75rem;
+    line-height: 1.25;
+    text-align: center;
+    color: #000;
+    font-family: var(--font);
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+#spotlight {
+    color: #39e09b;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
